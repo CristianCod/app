@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "MailContacto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container ">
+    <form action="/Registro/Guardar" method="post">
+
+
+        <div class="row">
+            <label class="col-md-2 aladerecha">Nombre</label>
+            <input class="col-md-4" type="text" name="nombre" />
+        </div>
+        <div class="row">
+            <label class="col-md-2 aladerecha">Correo</label>
+            <input class="col-md-4" type="number" name="mail" />
+        </div>
+        <div class="row">
+            <label class="col-md-2 aladerecha">Correo</label>
+            <input class="col-md-4" type="number" name="mensaje" />
+        </div>
+        <div class="row">
+            <div class="col-md-6 aladerecha">
+                <input class="btn-default" type="submit" value="Enviar" />
+            </div>
+        </div>
+    </form>
+</div>
+
+

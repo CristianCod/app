@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br>
+<div class="container" id="login"><!--Login-->
+    <h2 class="text-center">Registrate</h2>
+    <hr class="featurette-divider">
+    <br>
+    <form action="@Url.Action("login","UsuarioAcciones")" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-4 control-label">Nombre</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="nombre" placeholder="Tu Nombre" width="60">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Apellido</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="apellido" placeholder="Tu Apellido" width="60">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Email</label>
+            <div class="col-sm-4">
+                <input type="email" class="form-control" name="email" placeholder="Tu Correo" width="60">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Contraseña</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" name="contraseña" placeholder="Tu Contraseña" maxlength="8" width="60">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Recuerdame
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success" value="Guardar">Registrate</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--Fin div de login-->

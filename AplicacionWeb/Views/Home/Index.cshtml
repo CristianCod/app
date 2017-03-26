@@ -1,0 +1,171 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="Pag">
+    <!-- Abarca toda la pag.-->
+    <hr class="featurette-divider">
+    <br>
+    <h1>Novedades</h1>
+
+    <!--carousel-->
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+
+
+
+        </ol>
+
+        <!-- item en carousel -->
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcIuzKLl4I7fkGarEswaHY8MZujh4HtWEJogvsZO8rwRKBXvmIRctbIJbvGhIF1MYXFsbYUfPUFJ8p.Lq9celSijndolEIgmHH2s7cqV.CugX7RCLPYeKR0e308riq.I0clwvXx9tOgxNx_opF3FrHCubkSYTJUi_BTOUNJx40EH8-&w=1440&h=810&format=jpg" class="first-slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>The Walking Dead: A New Frontier</h3>
+                        <p>...</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!--prueba foreach en bd-->
+    @*<div class"carousel-inner" role="listbox">
+            @if (ViewBag.Productos != null)
+            {
+                foreach (AplicacionWeb.Models.Productos producto in ViewBag.Productos)
+                {
+                    <div class="item">
+                        <img src="@producto.Imagen" class="">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>@producto.Titulo</h3>
+                                <p>@producto.Info</p>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            </div>*@
+
+            <!--fin prueba-->
+
+            <!--item-->
+            <div class="item">
+                <img src="https://store.dinasty.com.ar/steam/apps/730/ss_ccc4ce6edd4c454b6ce7b0757e633b63aa93921d.600x338.jpg?t=1432930508" class="second-slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Counter-Strike: Global Ofensive, en Oferta.</h3>
+                        <p>...</p>
+
+                    </div>
+                </div>
+            </div>
+            <!--item-->
+            <div class="item">
+                <img src="http://listor.se/wp-content/uploads/2016/08/Eddie-Vedder.jpg" class="third-slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Consigue ahora una Steam Wallet</h3>
+                        <p>...</p>
+
+                    </div>
+                </div>
+            </div>
+
+           
+        </div><!--Fin de items-->
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    >
+    <!--Fin carousel-->
+    <hr><br>
+
+    <!--Columnas-->
+    <div id="columnas" class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <img class="img-" src="http://www.clubtalleres.com.ar/wp-content/uploads/2016/02/mercado.jpg">
+                <h3>Podes pagar con Mercadopago y otras Formas de pago en efectivo</h3>
+                <p>Muy Pronto otras formas de pago en Efectivo</p>
+            </div>
+            
+                <div class="col-lg-4 text-center">
+                    <img class="img-responsive" src="https://i0.wp.com/www.reapershop.com/wp-content/uploads/2015/07/steam-wallet-1.jpg?fit=1440%2C810&ssl=1">
+                    <h3>Compra juegos de Steam o Uplay.</h3>
+                    <p>Ordená el pedido y tenelo a las horas</p>
+                </div>
+
+
+                <div class="col-lg-4 text-center">
+                    <img class="img-responsive" src="http://d26lpennugtm8s.cloudfront.net/stores/160/456/products/steam-wallet-501-829522959b29d7c07b14689344103290-480-0.jpg">
+                    <h3>Compra directamente con tu Wallet</h3>
+                    <p>Con tu Wallet podés comprar al instante.</p>
+                </div>
+            </div>
+       </div><!--fin container-->
+       <hr />
+    <div class="row" id="plugins"><!--Columnas plugin-->
+        <div class="col-md-5">
+        <a class="twitter-timeline" data-lang="es" data-width="600" data-height="500" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/cronicaweb">Tweets by cronicaweb</a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <!--plugin facebook-->
+        <div style="width:600px" class="col-md-5 col-md-offset-2">
+            <div class="fb-page" data-href="https://www.facebook.com/cronicadiario" data-tabs="timeline" data-width="600" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/cronicadiario" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cronicadiario">Diario Crónica</a></blockquote></div>
+        </div>
+    <!--fin plugin face-->
+    </div><!--fin columnas plugin-->
+
+
+</div><!-- Termina la pag.-->
+
+
+<!--plugin facebook-->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'your-app-id',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_ES/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<!--fin plugin facebook-->
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Content/Miestilo.css" rel="stylesheet" />
+<script src="~/Scripts/ScriptPag.js"></script>
+<script src="~/Content/bootstrap.min.js"></script>
+<script src="~/Content/jquery.min.js"></script>
+<link href="~/Content/Miestilo.css" rel="stylesheet" />

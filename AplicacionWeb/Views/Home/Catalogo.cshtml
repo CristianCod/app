@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "Catalogo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="novedades" >
+    <!--Comienzo Columnas-->
+    <h1>Catálogo</h1>
+    <div id="articulos"><!--sql productos-->
+        @if (ViewBag.Productos != null)
+        {
+            foreach (AplicacionWeb.Models.Productos producto in ViewBag.Productos)
+            {
+
+                <div class="row featurette">
+                    <!--verificar datos-->
+                    <div class="col-md-8 col-md-push-4">
+                        <h2 class="featurette-heading">@producto.Titulo <span class="text-muted">Compralo ahora por $@producto.Precio</span></h2>
+                        <p class="lead">
+                            @producto.Info
+                        </p>
+                        <br>
+                        <button class="btn btn-default" type="button"><a href="#">Comprar</a></button>
+                        <button class="btn btn-block" type="button"> <a href=@Url.Action("compraCatalogo", "Home")></a>Agregar a Compras</button>
+                    </div>
+                    <br>
+                    <div class="col-md-4 col-md-pull-8">
+                        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="@producto.Imagen" data-holder-rendered="true">
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <!--Verificacion de row al otro lado-->
+
+                <div class="row featurette">
+                    <div class="col-md-8 col-md-push-4">
+                        <h2 class="featurette-heading">@producto.Titulo <span class="text-muted">Compralo ahora por $.</span></h2>
+                        <p class="lead">@producto.Info
+                        </p>
+
+                        <br>
+                        <button class="btn btn-default" type="button"><a href="#">Comprar</a></button>
+                    <button class="btn btn-block" type="button">Agregar a Compras</button>
+                    </div>
+                    <br>
+                    <div class="col-md-4 col-md-pull-8">
+                        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="@producto.Imagen" data-holder-rendered="true">
+                    </div>
+                </div>
+                <hr class="featurette-divider">
+
+
+                <!--fin verificacion-->
+            }
+        }
+    </div><!--fin sql productos-->
+
+    @*<hr class="featurette-divider">
+    <div class="row featurette">
+        <!--verificar datos-->
+        <div class="col-md-8">
+            <h2 class="featurette-heading">The Walking Dead: A New Frontier <span class="text-muted">Compralo ahora por $.</span></h2>
+            <p class="lead">
+                Mientras Javier, un joven decidido a encontrar a la familia que le quitaron, tú conoces a una joven que ha experimentado su propia e inimaginable pérdida. Su nombre es Clementine,
+                y sus destinos están unidos en una historia en la que cada elección que hagan puede ser la última
+            </p>
+            <br>
+            <button class="btn btn-success" type="button">Comprar</button>
+            <button class="btn btn-primary" type="button" value="The Walking Dead: A New Frontier"> <a href=@Url.Action("compraCatalogo","Home")></a>Agregar a Compras</button>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1YTkxZDdiZDI3IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTVhOTFkN2JkMjciPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEyNSIgeT0iMjYxLjEiPjUwMHg1MDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-8 col-md-push-4">
+            <h2 class="featurette-heading">Mad Max <span class="text-muted">Compralo ahora por $.</span></h2>
+            <p class="lead">
+                Conviértete en Mad Max, un guerrero solitario en un despiadado mundo postapocalíptico donde los vehículos son imprescindibles para la supervivencia.
+                En este juego de acción de mundo abierto en tercera persona deberás luchar constantemente contra crueles enemigos para mantenerte con vida en el Páramo.
+            </p>
+
+            <br>
+            <button class="btn btn-success" type="button">Comprar</button>
+            <button class="btn btn-primary" type="button">Agregar a Compras</button>
+
+        </div>
+        <br>
+        <div class="col-md-4 col-md-pull-8">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1YTkxZDgxYWEzIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTVhOTFkODFhYTMiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEyNSIgeT0iMjYxLjEiPjUwMHg1MDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <!--Punto-->
+    <div class="row featurette">
+        <div class="col-md-8">
+            <h2 class="featurette-heading">Dark Souls III <span class="text-muted">Compralo ahora por $.</span></h2>
+            <p class="lead">
+                Conviértete en Mad Max, un guerrero solitario en un despiadado mundo postapocalíptico donde los vehículos son imprescindibles para la supervivencia.
+                En este juego de acción de mundo abierto en tercera persona deberás luchar constantemente contra crueles enemigos para mantenerte con vida en el Páramo.
+            </p>
+            <br>
+            <button class="btn btn-success" type="button">Comprar</button>
+            <button class="btn btn-primary" type="button">Agregar a Compras</button>
+
+        </div>
+        <br>
+        <div class="col-md-4">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1YTkxZDdlZjdhIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTVhOTFkN2VmN2EiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEyNSIgeT0iMjYxLjEiPjUwMHg1MDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
+        </div>
+    </div>
+    <!--Punto-->
+    
+   
+    <!--Punto-->
+    
+    <!--Punto-->
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-8 col-md-push-4">
+            <h2 class="featurette-heading">Mad Max <span class="text-muted">Compralo ahora por $.</span></h2>
+            <p class="lead">
+                Conviértete en Mad Max, un guerrero solitario en un despiadado mundo postapocalíptico donde los vehículos son imprescindibles para la supervivencia.
+                En este juego de acción de mundo abierto en tercera persona deberás luchar constantemente contra crueles enemigos para mantenerte con vida en el Páramo.
+            </p>
+
+            <br>
+            <button class="btn btn-success" type="button">Comprar</button>
+            <button class="btn btn-primary" type="button">Agregar a Compras</button>
+
+        </div>
+        <br>
+        <div class="col-md-4 col-md-pull-8">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1YTkxZDgxYWEzIHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTVhOTFkODFhYTMiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEyNSIgeT0iMjYxLjEiPjUwMHg1MDA8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" data-holder-rendered="true">
+        </div>
+    </div>
+    <hr class="featurette-divider">*@
+    <!--Nav de pagina-->
+    <nav aria-label="pagination pagination-lg">
+        <ul class="pager">
+            <li><a href="">Anterior</a></li>
+            <li><a href="">Siguiente</a></li>
+        </ul>
+    </nav>
+    <!--Nav-->
+
+
+
+
+
+</div><!--Fin columnas-->

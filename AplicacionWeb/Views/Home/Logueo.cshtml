@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Logueo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="logueo">
+    <h2 class="text-center">Ingresa con tu Usuario</h2>
+    <hr class="featurette-divider">
+    <br>
+    <form action="@Url.Action("LogueoUsuario", "UsuarioAcciones")" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-4 control-label">Email</label>
+            <div class="col-sm-4">
+                <input type="email" class="form-control" name="email" placeholder="Tu Correo" width="120">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-4 control-label">Contraseña</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" name="contraseña" placeholder="Tu Contraseña" maxlength="8" width="120">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Recuerdame
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8">
+                <button type="submit" class="btn btn-success" value="Guardar">Inicia Sesión</button>
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+
+
+
+
+
+    @*<form action="@Url.Action("LogueoUsuario", "UsuarioAcciones")" method="post" class="form-signin">
+        <h2 class="form-signin-heading">Por favor ingresá</h2>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" name="email" class="form-control" placeholder="" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="contraseña" class="form-control" placeholder="" required="">
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+    </form>*@
+
+
+
+
+
+</div>

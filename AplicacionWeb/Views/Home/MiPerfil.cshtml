@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "MiPerfil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tab-pane">
+    <!--Comienzo de tab-->
+    <h2>Mi Perfil</h2>
+    <ul id="tabperfil" class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active"><a href="#Perfil" id="Perfiltab" data-toggle="tab" role="tab">Mi Perfil</a></li>
+        <li role="presentation"><a href="#Compras" id="Comprastab" data-toggle="tab" role="tab">Mis Compras</a></li>
+        <li role="presentation"><a href="#Datos" id="Datostab" data-toggle="tab" role="tab">Configuracion</a></li>
+    </ul>
+</div><!--Fin de tab-->
+<!--Se colocaron id para verificar luego la actualizacion de datos-->
+<!--Info de tab-->
+<div class="tab-content">
+    <div id="Perfil" class="tab-pane fade" aria-labelledby="profile-tab">
+        Contenido tab1
+    </div>
+    <div id="Compras" class="tab-pane fade" aria-labelledby="profile-tab">
+        Contenido tab2
+    </div>
+    <div id="Datos" class="tab-pane fade" aria-labelledby="profile-tab">
+        Contenido tab3
+    </div>
+</div>
+
